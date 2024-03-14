@@ -89,7 +89,7 @@
         });
         advancedTexture.addControl(button1);
         const addObject = function () {
-          BABYLON.SceneLoader.ImportMeshAsync("", "./gltf/", "kaisendon.glb").then((result) => {
+          BABYLON.SceneLoader.ImportMeshAsync("", "", "https://cdn.glitch.global/1de37b4d-1587-4d2d-b443-f88924611351/kaisendon.glb?v=1709595057003").then((result) => {
             var box3 = BABYLON.Mesh.CreateBox("crate", 2, scene);
             box3.position = new BABYLON.Vector3(0, 30, 0); //5,-9,-10
             box3.checkCollisions = true;
@@ -110,6 +110,7 @@
           });
         }
         advancedTexture.addControl(button1);
+        
         var ground = BABYLON.Mesh.CreateGround("ground1", 1000, 1000, 2, scene);
         ground.receiveShadows = true;
         ground.checkCollisions = true;
